@@ -21,6 +21,13 @@ java -version
 javac -d out -sourcepath src src/com/illumio/*.java
 java -cp out com.illumio.Main
 ```
+
+#### Compile and Run the test
+```
+javac -d out -sourcepath src src/com/illumio/*.java src/test/*.java
+java -cp out test/AWSLogProcessorTest
+```
+
 #### Project structure
 src/com/illumio/ -> Main application files
 src/test -> Unit test files
@@ -44,6 +51,7 @@ The lookup table file is a plain text CSV with columns: dstport, protocol, tag. 
 * Output file location is "src/output.txt"
 * I have initiated the look up inside processLogs for ease of task. Usually it would be passed in as a parameter to AWSLogProcessor during instantiation or via dependency injection.
 * To polish the output i have right padded spaces to some columns while writing to file.
+* The AWSLogProcessor is a singleton class assuming that look up file is the same for a given cloud provider.
 
 Note: you will see commits from "MS". That is just my home's macbook name. As i set up git with an ssh key (ms@MSs-MacBook-Pro.local) from my home macbook and git seems to use that for author name.
 

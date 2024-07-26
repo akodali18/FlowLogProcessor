@@ -15,7 +15,7 @@ public class LogProcessorFactory {
 	public static LogProcessor create(CloudProvider type) {
 		switch(type) {
 			case AWS:
-				return new AWSLogProcessor();
+				return AWSLogProcessor.getInstance();
 			default:
 				throw new IllegalArgumentException("Unsupported Log type");
 		}

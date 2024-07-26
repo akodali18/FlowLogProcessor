@@ -10,8 +10,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AWSLogProcessor implements LogProcessor{
-	
 
+    private static AWSLogProcessor instance;
+
+    private AWSLogProcessor() {}
+
+    // Singleton instance
+    public static AWSLogProcessor getInstance() {
+        if (instance == null) {
+            synchronized (AWSLogProcessor.class) {
+                if (instance == null) {
+                    instance = new AWSLogProcessor();
+                }
+            }
+        }
+        return instance;
+    }
+    
 	/**
 	 * 
 	 * Processes flow log data from AWS cloud provider.
