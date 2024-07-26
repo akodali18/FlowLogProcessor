@@ -28,6 +28,8 @@ java -cp out com.illumio.Main
 * Test Matrix can be found in the test file at src/test/AWSLogProcessorTest.java and I have limited the unit testing to the main log processor task.
 * Based on the given constraints of flow log file and look up files, they seem small enough to be read in memory BufferedReader.
 
+Note: you will see commits from "MS". That is just my home's macbook name. As i set up git with an ssh key (ms@MSs-MacBook-Pro.local) from my home macbook and git seems to use that for author name.
+
 
 
 
