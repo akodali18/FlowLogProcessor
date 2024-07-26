@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.illumio;
 
 import java.io.IOException;
